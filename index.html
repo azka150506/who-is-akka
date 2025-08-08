@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>🔥 Animasi Keren - Akka</title>
+<title>Profil Akka - Animasi Kece</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -28,9 +28,15 @@
     100% {background-position: 0% 50%;}
   }
 
-  /* Teks animasi fade in dan naik */
-  .container {
+  /* Container card */
+  .card {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px 50px;
+    max-width: 420px;
     text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     animation: fadeUp 2s ease forwards;
     opacity: 0;
     transform: translateY(30px);
@@ -43,24 +49,86 @@
     }
   }
 
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .avatar:hover {
+    transform: scale(1.1) rotate(10deg);
+  }
+
   h1 {
-    font-size: 4rem;
-    margin: 0;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    font-style: italic;
   }
 
   p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    font-weight: 500;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
   }
+
+  .info-list {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .info-list li {
+    margin: 8px 0;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* Button animasi */
+  .btn-contact {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: #fff;
+    color: #4ade80;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(255,255,255,0.6);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-contact:hover {
+    background: #4ade80;
+    color: white;
+    box-shadow: 0 8px 25px #4ade80;
+  }
+
 </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Halo,world!</h1>
-    <p>programer by : akka!</p>
+  <div class="card">
+    <img src="https://avatars.githubusercontent.com/u/azka150506?s=200&v=4" alt="Foto Akka" class="avatar" />
+    <h1>Akka</h1>
+    <h2>Crypto Enthusiast & Future-Proof Investor</h2>
+    <p>Sering-sering update dari teks pembicaraan, siap ngegas di dunia investasi crypto, khususnya XRP! 🚀</p>
+    <ul class="info-list">
+      <li><strong>Preferred Name:</strong> Akka</li>
+      <li><strong>Specialty:</strong> Jangka Panjang di XRP</li>
+      <li><strong>Goal:</strong> Investasi Leher ke Atas (Self-Development)</li>
+    </ul>
+    <a href="https://github.com/azka150506" target="_blank" class="btn-contact">Lihat GitHub Akka</a>
   </div>
 </body>
 </html>
