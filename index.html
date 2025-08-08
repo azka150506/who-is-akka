@@ -3,43 +3,34 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Profil Akka - Animasi Kece</title>
+<title>Profil Akka - Dark Mode</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  /* Background gradient animasi */
+  /* Background gelap dengan gradasi subtle */
   body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ade80, #facc15);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    background: linear-gradient(135deg, #121212, #1e1e2f, #121212);
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #cfd8dc;
     overflow: hidden;
-    color: white;
   }
 
-  @keyframes gradientShift {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
-
-  /* Container card */
+  /* Card transparan gelap */
   .card {
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(12px);
+    background: rgba(30, 30, 47, 0.85);
     border-radius: 20px;
     padding: 40px 50px;
-    max-width: 420px;
+    max-width: 400px;
     text-align: center;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-    animation: fadeUp 2s ease forwards;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    animation: fadeUp 1.8s ease forwards;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
 
   @keyframes fadeUp {
@@ -49,80 +40,75 @@
     }
   }
 
-  .avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin: 0 auto 20px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(255,255,255,0.4);
-    transition: transform 0.3s ease;
+  /* Tulisan utama AKKA PROGRAMER */
+  .title {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: #80cbc4; /* warna kalem teal */
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    user-select: none;
+    text-shadow: 0 0 10px #80cbc4aa;
   }
 
-  .avatar:hover {
-    transform: scale(1.1) rotate(10deg);
-  }
-
-  h1 {
-    font-size: 2.8rem;
-    margin-bottom: 5px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  }
-
-  h2 {
-    font-weight: 400;
+  /* Subtitle */
+  .subtitle {
     font-size: 1.3rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #e0e0e0;
+    font-weight: 600;
+    color: #b0bec5;
+    margin-bottom: 25px;
     font-style: italic;
   }
 
+  /* Paragraf info */
   p {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 20px;
+    color: #b0bec5;
   }
 
-  .info-list {
+  ul.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
     text-align: left;
-    margin-top: 10px;
   }
 
-  .info-list li {
-    margin: 8px 0;
-    font-weight: 600;
+  ul.info-list li {
+    margin: 10px 0;
+    font-weight: 500;
+    border-left: 3px solid #80cbc4;
+    padding-left: 12px;
+    color: #cfd8dc;
     letter-spacing: 0.04em;
   }
 
-  /* Button animasi */
+  /* Tombol contact */
   .btn-contact {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 12px 32px;
     border-radius: 30px;
-    background: #fff;
-    color: #4ade80;
+    background: #80cbc4;
+    color: #121212;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 6px 15px rgba(255,255,255,0.6);
+    box-shadow: 0 6px 15px #80cbc4aa;
     transition: background 0.3s ease, color 0.3s ease;
   }
 
   .btn-contact:hover {
-    background: #4ade80;
-    color: white;
-    box-shadow: 0 8px 25px #4ade80;
+    background: #4f9a8a;
+    color: #e0f2f1;
+    box-shadow: 0 8px 25px #4f9a8acc;
   }
-
 </style>
 </head>
 <body>
   <div class="card">
-    <img src="https://avatars.githubusercontent.com/u/azka150506?s=200&v=4" alt="Foto Akka" class="avatar" />
-    <h1>Akka</h1>
-    <h2>Crypto Enthusiast & Future-Proof Investor</h2>
-    <p>Sering-sering update dari teks pembicaraan, siap ngegas di dunia investasi crypto, khususnya XRP! 🚀</p>
+    <div class="title">AKKA PROGRAMER</div>
+    <div class="subtitle">Crypto Enthusiast & Future-Proof Investor</div>
+    <p>Sering-sering update dari teks pembicaraan, fokus investasi jangka panjang XRP, dan selalu upgrade skill buat masa depan.</p>
     <ul class="info-list">
       <li><strong>Preferred Name:</strong> Akka</li>
       <li><strong>Specialty:</strong> Jangka Panjang di XRP</li>
