@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Profil Akka - Dark Mode</title>
+<title>Profil Akka - Mobile Friendly</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  /* Background gelap dengan gradasi subtle */
+  /* Background gelap kalem */
   body {
     margin: 0;
-    height: 100vh;
-    background: linear-gradient(135deg, #121212, #1e1e2f, #121212);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #121212, #1e1e2f);
     font-family: 'Poppins', sans-serif;
+    color: #cfd8dc;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #cfd8dc;
-    overflow: hidden;
+    padding: 15px;
   }
 
-  /* Card transparan gelap */
+  /* Card utama */
   .card {
-    background: rgba(30, 30, 47, 0.85);
-    border-radius: 20px;
-    padding: 40px 50px;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
-    animation: fadeUp 1.8s ease forwards;
+    background: rgba(30, 30, 47, 0.9);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 360px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    animation: fadeUp 1.5s ease forwards;
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
 
   @keyframes fadeUp {
@@ -40,39 +40,39 @@
     }
   }
 
-  /* Tulisan utama AKKA PROGRAMER */
+  /* Judul utama */
   .title {
-    font-size: 3.8rem;
+    font-size: 2.4rem;
     font-weight: 900;
-    color: #80cbc4; /* warna kalem teal */
-    letter-spacing: 0.15em;
+    color: #80cbc4;
+    letter-spacing: 0.12em;
     margin-bottom: 8px;
     user-select: none;
-    text-shadow: 0 0 10px #80cbc4aa;
+    text-shadow: 0 0 8px #80cbc4aa;
   }
 
   /* Subtitle */
   .subtitle {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #b0bec5;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-style: italic;
   }
 
-  /* Paragraf info */
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  /* Deskripsi */
+  p.description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
     color: #b0bec5;
   }
 
+  /* List info */
   ul.info-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 30px 0;
-    text-align: left;
+    margin: 0 0 24px 0;
   }
 
   ul.info-list li {
@@ -82,19 +82,43 @@
     padding-left: 12px;
     color: #cfd8dc;
     letter-spacing: 0.04em;
+    font-size: 0.95rem;
   }
 
-  /* Tombol contact */
+  /* Link sosial media */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 10px;
+  }
+
+  .social-links a {
+    color: #80cbc4;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+    user-select: none;
+  }
+
+  .social-links a:hover {
+    color: #4f9a8a;
+  }
+
+  /* Tombol GitHub */
   .btn-contact {
-    display: inline-block;
-    padding: 12px 32px;
+    display: block;
+    width: 100%;
+    padding: 12px 0;
     border-radius: 30px;
     background: #80cbc4;
     color: #121212;
     font-weight: 700;
+    text-align: center;
     text-decoration: none;
     box-shadow: 0 6px 15px #80cbc4aa;
     transition: background 0.3s ease, color 0.3s ease;
+    user-select: none;
   }
 
   .btn-contact:hover {
@@ -102,19 +126,47 @@
     color: #e0f2f1;
     box-shadow: 0 8px 25px #4f9a8acc;
   }
+
+  /* Responsive font smaller for super small phones */
+  @media (max-width: 320px) {
+    .title {
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+    }
+    .subtitle, p.description, ul.info-list li {
+      font-size: 0.85rem;
+    }
+    .social-links a {
+      font-size: 1.4rem;
+    }
+  }
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="title">AKKA PROGRAMER</div>
+  <div class="card" role="main">
+    <div class="title" aria-label="Nama Akka Programer">AKKA PROGRAMER</div>
     <div class="subtitle">Crypto Enthusiast & Future-Proof Investor</div>
-    <p>Sering-sering update dari teks pembicaraan, fokus investasi jangka panjang XRP, dan selalu upgrade skill buat masa depan.</p>
+    <p class="description">
+      Sering update dari teks pembicaraan, fokus investasi jangka panjang XRP, dan terus upgrade skill untuk masa depan yang lebih cerah.
+    </p>
+
     <ul class="info-list">
-      <li><strong>Preferred Name:</strong> Akka</li>
-      <li><strong>Specialty:</strong> Jangka Panjang di XRP</li>
+      <li><strong>Nama:</strong> Akka</li>
+      <li><strong>Keahlian:</strong> Jangka Panjang di XRP & Programming</li>
       <li><strong>Goal:</strong> Investasi Leher ke Atas (Self-Development)</li>
+      <li><strong>Email:</strong> akka@example.com</li>
+      <li><strong>Lokasi:</strong> Indonesia</li>
     </ul>
-    <a href="https://github.com/azka150506" target="_blank" class="btn-contact">Lihat GitHub Akka</a>
+
+    <div class="social-links" aria-label="Link sosial media Akka">
+      <a href="https://instagram.com/akka" target="_blank" rel="noopener" title="Instagram Akka" aria-label="Instagram Akka">📸</a>
+      <a href="https://facebook.com/akka" target="_blank" rel="noopener" title="Facebook Akka" aria-label="Facebook Akka">📘</a>
+      <a href="https://github.com/azka150506" target="_blank" rel="noopener" title="GitHub Akka" aria-label="GitHub Akka">💻</a>
+      <a href="https://twitter.com/akka" target="_blank" rel="noopener" title="Twitter Akka" aria-label="Twitter Akka">🐦</a>
+      <a href="https://linkedin.com/in/akka" target="_blank" rel="noopener" title="LinkedIn Akka" aria-label="LinkedIn Akka">🔗</a>
+    </div>
+
+    <a href="https://github.com/azka150506" target="_blank" rel="noopener" class="btn-contact" aria-label="Lihat GitHub Akka">Lihat GitHub Akka</a>
   </div>
 </body>
-</html>
+  </html>
